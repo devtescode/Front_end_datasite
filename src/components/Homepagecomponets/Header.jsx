@@ -1,9 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Header = () => {
+  const navigate = useNavigate()
+  const LoginBtn=()=>{
+    navigate('/login')
+  }
   return (
     <>
     <motion.header
@@ -18,7 +23,7 @@ const Header = () => {
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div className="collapse navbar-collapse text-center" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
                 <a className="nav-link" href="#home">Home</a>
@@ -39,7 +44,7 @@ const Header = () => {
                 <a className="nav-link" href="#testimonial">Testimonial</a>
               </li>
             </ul>
-            <button className="btn btn-primary ms-3">Login</button>
+            <button className="btn btn-primary ms-3" onClick={LoginBtn}>Login</button>
           </div>
         </div>
       </nav>

@@ -3,8 +3,10 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import HeroImage from "../../assets/Images/Hero.png";
 import "./Hero.css";
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate = useNavigate()
   const { yRange, opacityRange } = useScrollAnimation();
   const [currentText, setCurrentText] = useState("Welcome To DATASUB");
 
@@ -24,6 +26,15 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [messages]);
 
+
+  const RegisterBtn=()=>{
+    navigate("/register")
+  }
+
+  const LoginBtn=()=>{
+    navigate("/login")
+  }
+
   return (
     <section id="home" className=" text-white py-5" style={{ height: "100vh", backgroundColor:"#00838d" }}>
       <div className="container h-100 d-flex align-items-center justify-content-center">
@@ -38,8 +49,8 @@ const Hero = () => {
             We are a licensed telecommunications provider offering services for voice and data transmission, including mobile data and airtime (VTU).
             </p>
             <div>
-              <button className="btn btn-warning me-3">Login</button>
-              <button className="btn btn-success">Register</button>
+              <button className="btn btn-warning me-3" onClick={LoginBtn}>Login</button>
+              <button className="btn btn-success" onClick={RegisterBtn}>Register</button>
             </div>
           </motion.div>
 
