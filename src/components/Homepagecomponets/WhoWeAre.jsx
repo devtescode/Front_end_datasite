@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import HeroImage from "../../assets/Images/Hero.png";
 
 const features = [
   "We're Fast",
@@ -40,7 +41,7 @@ const WhoWeAre = () => {
             className="col-md-6"
             style={{ y: yRange, opacity: opacityRange }}
           >
-            <img src="" alt="Who We Are" className="img-fluid rounded" />
+            <img src={HeroImage} alt="Who We Are" className="img-fluid rounded" />
           </motion.div>
         </div>
       </div>

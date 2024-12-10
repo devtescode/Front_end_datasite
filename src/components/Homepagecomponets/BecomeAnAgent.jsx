@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import HeroImage from "../../assets/Images/Hero.png";
 
 const BecomeAnAgent = () => {
   const { yRange, opacityRange } = useScrollAnimation();
@@ -14,7 +15,7 @@ const BecomeAnAgent = () => {
             className="col-md-6"
             style={{ y: yRange, opacity: opacityRange }}
           >
-            <img src="/placeholder.svg?height=400&width=400&text=Become+An+Agent" alt="Become An Agent" className="img-fluid rounded" />
+            <img src={HeroImage} alt="Become An Agent" className="img-fluid rounded" />
           </motion.div>
           <motion.div
             className="col-md-6"
