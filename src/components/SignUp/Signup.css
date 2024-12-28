@@ -8,7 +8,7 @@
     background: linear-gradient(to bottom, #00838d, #302b63, #24243e);
 }
 .main{
-    width: 450px;
+    /* width: 450px; */
     height: 560px;
     background-color: red;
     overflow: hidden;

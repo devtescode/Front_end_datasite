@@ -103,7 +103,7 @@ section {
 
 @media (max-width: 768px) {
   .main {
-    width: 98%; /* Adjust width for smaller screens */
+    width: 97%; /* Adjust width for smaller screens */
   }
 
   .button_submit {
@@ -112,5 +112,6 @@ section {
 
   .input_text {
     font-size: 0.9em; /* Slightly smaller font for inputs */
+    width: 100% ;
   }
 }

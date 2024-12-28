@@ -19,17 +19,17 @@ const Signup = () => {
       Username: Yup.string().required('Username is required'),
       Number: Yup.string().required('Phone number is required'),
       Email: Yup.string().email('Invalid email address').required('Email is required'),
-      Password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
+      Password: Yup.string().min(4, 'Password must be at least 6 characters').required('Password is required'),
     }),
     onSubmit: async (values, { setSubmitting }) => {
       // console.log( "vsds",values);
-      
+
       try {
         const response = await axios.post('http://localhost:4000/userfunding/register', values);
         if (response.data.status) {
           Swal.fire({
             icon: 'success',
-            title: 'Sign-Up Successful',
+            title: '',
             text: response.data.message || 'Welcome!',
           }).then(() => {
             navigate('/login'); // Navigate to login page
@@ -52,6 +52,11 @@ const Signup = () => {
       }
     },
   });
+
+
+  const GotoSignBTN =()=>{
+    navigate('/login')
+  }
 
   return (
     <div className='container_main'>
@@ -113,6 +118,9 @@ const Signup = () => {
               </button>
             </div>
           </form>
+          <div className='mt-3'>
+            <span>Already a member? <span className='fw-bold' style={{ color: "#573b8a", cursor:"pointer"}} onClick={GotoSignBTN}>Sign In</span></span>
+          </div>
         </div>
       </div>
     </div>
