@@ -51,6 +51,9 @@ const Login = () => {
     },
   });
 
+  const GotoSignupBtn =()=>{
+    navigate("/register")
+  }
   return (
     <div className='container_main'>
       <div className='main'>
@@ -87,6 +90,15 @@ const Login = () => {
               </button>
             </div>
           </form>
+
+          <div className='mt-4'>
+            <div>
+              <span>Don't have an account yet? <span className='fw-bold' onClick={GotoSignupBtn} style={{ color: "#573b8a", cursor: "pointer" }}>Sign Up</span></span>
+            </div>
+            <div className='text-center'>
+              <p style={{ color: "#573b8a", cursor: "pointer" }}>Forgot Password?</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
