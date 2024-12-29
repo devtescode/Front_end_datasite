@@ -10,16 +10,12 @@ const Login = () => {
 
   const formik = useFormik({
     initialValues: {
-      Username: '',
-      Number: '',
       Email: '',
       Password: '',
     },
     validationSchema: Yup.object({
-      Username: Yup.string().required('Username is required'),
-      Number: Yup.string().required('Phone number is required'),
       Email: Yup.string().email('Invalid email address').required('Email is required'),
-      Password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
+      Password: Yup.string().min(4, 'Password must be at least 6 characters').required('Password is required'),
     }),
     onSubmit: async (values, { setSubmitting }) => {
       try {
@@ -27,16 +23,16 @@ const Login = () => {
         if (response.data.status) {
           Swal.fire({
             icon: 'success',
-            title: 'Sign-Up Successful',
+            title: 'Login Successful',
             text: response.data.message || 'Welcome!',
           }).then(() => {
-            navigate('/login'); // Navigate to login page
+            // navigate('/dashboard'); // Navigate to the dashboard or desired page
           });
         } else {
           Swal.fire({
             icon: 'error',
             title: 'Error',
-            text: response.data.message || 'Something went wrong.',
+            text: response.data.message || 'Invalid Email or Password.',
           });
         }
       } catch (error) {
@@ -51,9 +47,10 @@ const Login = () => {
     },
   });
 
-  const GotoSignupBtn =()=>{
-    navigate("/register")
-  }
+  const GotoSignupBtn = () => {
+    navigate("/register");
+  };
+
   return (
     <div className='container_main'>
       <div className='main'>
