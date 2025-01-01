@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -6,8 +6,14 @@ import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  localStorage.removeItem("useradminlogin")
+  useEffect(() => {
+    if (!localStorage.token) {
+      navigate('/login');
+    }
+  }, []);
+  
   const navigate = useNavigate();
-
   const formik = useFormik({
     initialValues: {
       Email: '',
@@ -23,11 +29,17 @@ const Login = () => {
         if (response.data.status) {
           Swal.fire({
             icon: 'success',
-            title: 'Login Successful',
+            // title: 'Login Successful',
             text: response.data.message || 'Welcome!',
           }).then(() => {
-            // navigate('/dashboard'); // Navigate to the dashboard or desired page
+            localStorage.setItem("UserData", JSON.stringify(response.data.userData));
+            localStorage.token = response.data.token
+            localStorage.setItem("token", response.data.token);
+            navigate("/dashboard")
+            localStorage.setItem("useradminlogin", true)
+
           });
+
         } else {
           Swal.fire({
             icon: 'error',
