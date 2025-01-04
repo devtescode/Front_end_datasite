@@ -60,15 +60,17 @@ const Dashboard = () => {
                             </li>
                         </ul>
 
-                        <a class="nav-link " role="button" aria-expanded="false">
-                            <i class="ri-history-line" style={{ color: "#00838d" }}></i> Transactions History
-                        </a>
+                        <div>
+                            <a class="nav-link " role="button" aria-expanded="false">
+                                <i class="ri-history-line" style={{ color: "#00838d" }}></i> Transactions History
+                            </a>
+                        </div>
 
-
-                        <a class="nav-link " role="button" aria-expanded="false">
-                            <i class="ri-logout-box-r-line" style={{ color: "#00838d" }}></i> LogOut
-                        </a>
-
+                        <div>
+                            <a class="nav-link " role="button" aria-expanded="false">
+                                <i class="ri-logout-box-r-line" style={{ color: "#00838d" }}></i> LogOut
+                            </a>
+                        </div>
                     </div>
                 </div>
             </nav>
