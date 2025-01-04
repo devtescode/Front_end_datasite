@@ -62,7 +62,13 @@ const Dashboard = () => {
 
                         <div>
                             <a class="nav-link " role="button" aria-expanded="false">
-                                <i class="ri-history-line" style={{ color: "#00838d" }}></i> Transactions History
+                                <i class="ri-history-line" style={{ color: "#00838d" }}></i> History
+                            </a>
+                        </div>
+
+                        <div>
+                            <a class="nav-link " role="button" aria-expanded="false">
+                                <i class="ri-notification-line" style={{ color: "#00838d" }}></i> Notification
                             </a>
                         </div>
 
@@ -81,6 +87,20 @@ const Dashboard = () => {
                         Welcome back, Tescode
                     </h2>
                     <p>At Datasub, we keep you connected...</p>
+                </div>
+            </div>
+
+            <div class="container text-center">
+                <div class="row align-items-start">
+                    <div class="col border">
+                        One of three columns
+                    </div>
+                    <div class="col border">
+                        One of three columns
+                    </div>
+                    <div class="col border">
+                        One of three columns
+                    </div>
                 </div>
             </div>
         </>
