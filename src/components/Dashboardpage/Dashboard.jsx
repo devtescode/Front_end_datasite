@@ -74,6 +74,15 @@ const Dashboard = () => {
                     </div>
                 </div>
             </nav>
+
+            <div className='p-3'>
+                <div className='text-white'>
+                    <h2>
+                        Welcome back, Tescode
+                    </h2>
+                    <p>At Datasub, we keep you connected...</p>
+                </div>
+            </div>
         </>
     );
 };
