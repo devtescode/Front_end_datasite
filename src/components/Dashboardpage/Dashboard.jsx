@@ -91,8 +91,8 @@ const Dashboard = () => {
             </div>
 
             <div class="container text-center">
-                <div class="row align-items-start gap-2 gap-sm-4  justify-content-center">
-                    <div class="col-11 col-md-3 border bg-white p-2">
+                <div class="row align-items-start gap-2 gap-sm-2  justify-content-center  ">
+                    <div class="Db_container_width bg-white p-2">
                         <div>
                             <div className='d-flex justify-content-between align-items-center'>
                                 <div className=''>
@@ -111,7 +111,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                    
-                    <div class="col-11 col-md-3 border bg-white p-2">
+                    <div class="Db_container_width bg-white p-2">
                         <div>
                             <div className='d-flex justify-content-between align-items-center'>
                                 <div className=''>
@@ -130,7 +130,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                    
-                    <div class="col-11 col-md-3 border bg-white p-2">
+                    <div class="Db_container_width bg-white p-2">
                         <div>
                             <div className='d-flex justify-content-between align-items-center'>
                                 <div className=''>
