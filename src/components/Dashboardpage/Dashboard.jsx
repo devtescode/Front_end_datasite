@@ -203,24 +203,36 @@ const Dashboard = () => {
 
             <div class="container mt-5">
                 <div class="row gap-2">
-                    <div class="col-9 border p-2"  style={{ backgroundColor: "#00838d", color: "#00848db0", boxShadow:"0px 0px 2px 2px" }}>
+                    <div class="col-11 col-md-9 border p-2" style={{ backgroundColor: "#00838d", color: "#00848db0", boxShadow: "0px 0px 2px 2px" }}>
                         <h2 className='text-white'>Notifications</h2>
                         <p className='text-white'>Payment successful your account has been credited with sum of #195 .</p>
                         <button className='btn btn-dark p-2'
-                           
+
                         >see all messages</button>
                     </div>
 
-                    <div class="col-4 border"  style={{ backgroundColor: "#00838d", color: "#00848db0", boxShadow:"0px 0px 2px 2px" }}>
+                    <div class="col-10 col-md-6 border p-2" style={{ backgroundColor: "#00838d", color: "#00848db0", boxShadow: "0px 0px 2px 2px" }}>
+                        <h2 className='text-white'>Support Team:</h2>
+                        <p className='text-white'>Have anything to say to us? Please contact our Support Team on Whatsapp</p>
+                        <div className=''>
+                        <div>
+                            <button className='btn btn-dark p-2'>Whatsapp us</button>
+                        </div>
+                        <div>
+                            <button className='btn btn-dark p-2 mt-2'>Join Our Whatsapp group</button>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="col-9 col-md-4 border p-2" style={{ backgroundColor: "#00838d", color: "#00848db0", boxShadow: "0px 0px 2px 2px" }}>
                         <h2 className='text-white'>FAQs:</h2>
                         <p className='text-white'>
-                        Please go through them to have a better knowledge of this platform
+                            Please go through them to have a better knowledge of this platform
                         </p>
                         <button className='btn btn-dark p-2'
-                           
-                           >FAQs</button>
+
+                        >FAQs</button>
                     </div>
-                    <div class="col-6 border">.col-6<br />Subsequent columns continue along the new line.</div>
                 </div>
             </div>
 
