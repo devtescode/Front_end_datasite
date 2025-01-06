@@ -5,7 +5,7 @@ const Dashboard = () => {
     return (
         <>
             <Navbar />
-            <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary p-3 fixed-top">
                 <div class="container-fluid">
                     <a class="navbar-brand" style={{ cursor: "pointer" }}>DATASUB</a>
                     <button
@@ -129,7 +129,7 @@ const Dashboard = () => {
                 </div>
             </nav>
 
-            <div className='p-3'>
+            <div className='p-3' style={{marginTop:"70px"}}>
                 <div className='text-white'>
                     <h2>
                         Welcome back, Tescode
