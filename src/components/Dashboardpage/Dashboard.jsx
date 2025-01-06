@@ -91,8 +91,8 @@ const Dashboard = () => {
             </div>
 
             <div class="container text-center">
-                <div class="row align-items-start gap-4">
-                    <div class="col-10 col-md-3 border bg-white">
+                <div class="row align-items-start gap-2 gap-sm-4  justify-content-center">
+                    <div class="col-11 col-md-3 border bg-white p-2">
                         <div>
                             <div className='d-flex justify-content-between align-items-center'>
                                 <div className=''>
@@ -106,16 +106,49 @@ const Dashboard = () => {
                         <div className='text-start fs-2'>
                             ₦100
                         </div>
-                        <div className='text-start'>
+                        <div className='text-start hover-underline' style={{cursor:"pointer"}}>
                             <span className='text-danger'>Fund</span><span className='mx-1'>Wallet</span>
                         </div>
                     </div>
-                    <div class="col-10 col-md-3 border">
-                        One of three columns
+                   
+                    <div class="col-11 col-md-3 border bg-white p-2">
+                        <div>
+                            <div className='d-flex justify-content-between align-items-center'>
+                                <div className=''>
+                                    <p>Wallet Balance</p>
+                                </div>
+                                <div className='fs-3 border text-white ' style={{height:"50px", width:"50px", borderRadius:"50px", backgroundColor:"#00838d"}}>
+                                    ₦
+                                </div>
+                            </div>
+                        </div>
+                        <div className='text-start fs-2'>
+                            ₦100
+                        </div>
+                        <div className='text-start hover-underline' style={{cursor:"pointer"}}>
+                            <span className='text-danger'>Fund</span><span className='mx-1'>Wallet</span>
+                        </div>
                     </div>
-                    <div class="col-10 col-md-3 border">
-                        One of three columns
+                   
+                    <div class="col-11 col-md-3 border bg-white p-2">
+                        <div>
+                            <div className='d-flex justify-content-between align-items-center'>
+                                <div className=''>
+                                    <p>Wallet Balance</p>
+                                </div>
+                                <div className='fs-3 border text-white ' style={{height:"50px", width:"50px", borderRadius:"50px", backgroundColor:"#00838d"}}>
+                                    ₦
+                                </div>
+                            </div>
+                        </div>
+                        <div className='text-start fs-2'>
+                            ₦100
+                        </div>
+                        <div className='text-start hover-underline' style={{cursor:"pointer"}}>
+                            <span className='text-danger'>Fund</span><span className='mx-1'>Wallet</span>
+                        </div>
                     </div>
+                   
                 </div>
             </div>
 
