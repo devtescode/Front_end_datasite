@@ -98,7 +98,7 @@ const Dashboard = () => {
                                 <div className=''>
                                     <p>Wallet Balance</p>
                                 </div>
-                                <div className='fs-3 border text-white ' style={{height:"50px", width:"50px", borderRadius:"50px", backgroundColor:"#00838d"}}>
+                                <div className='fs-3 border text-white ' style={{ height: "50px", width: "50px", borderRadius: "50px", backgroundColor: "#00838d" }}>
                                     ₦
                                 </div>
                             </div>
@@ -106,49 +106,49 @@ const Dashboard = () => {
                         <div className='text-start fs-2'>
                             ₦100
                         </div>
-                        <div className='text-start hover-underline' style={{cursor:"pointer"}}>
+                        <div className='text-start hover-underline' style={{ cursor: "pointer" }}>
                             <span className='text-danger'>Fund</span><span className='mx-1'>Wallet</span>
                         </div>
                     </div>
-                   
+
                     <div class="Db_container_width bg-white p-2">
                         <div>
                             <div className='d-flex justify-content-between align-items-center'>
                                 <div className=''>
-                                    <p>Wallet Balance</p>
+                                    <p>User Type</p>
                                 </div>
-                                <div className='fs-3 border text-white ' style={{height:"50px", width:"50px", borderRadius:"50px", backgroundColor:"#00838d"}}>
+                                <div className='fs-3 border text-white ' style={{ height: "50px", width: "50px", borderRadius: "50px", backgroundColor: "#00838d" }}>
                                     ₦
                                 </div>
                             </div>
                         </div>
                         <div className='text-start fs-2'>
-                            ₦100
+                            Reseller
                         </div>
-                        <div className='text-start hover-underline' style={{cursor:"pointer"}}>
-                            <span className='text-danger'>Fund</span><span className='mx-1'>Wallet</span>
+                        <div className='text-start hover-underline' style={{ cursor: "pointer" }}>
+                            <span style={{color:"#00838d"}}>Referral link</span><span className='mx-1'>Click here</span>
                         </div>
                     </div>
-                   
+
                     <div class="Db_container_width bg-white p-2">
                         <div>
                             <div className='d-flex justify-content-between align-items-center'>
                                 <div className=''>
-                                    <p>Wallet Balance</p>
+                                    <p>Whatsapp/Call</p>
                                 </div>
-                                <div className='fs-3 border text-white ' style={{height:"50px", width:"50px", borderRadius:"50px", backgroundColor:"#00838d"}}>
+                                <div className='fs-3 border text-white ' style={{ height: "50px", width: "50px", borderRadius: "50px", backgroundColor: "#00838d" }}>
                                     ₦
                                 </div>
                             </div>
                         </div>
                         <div className='text-start fs-2'>
-                            ₦100
+                            08064864821
                         </div>
-                        <div className='text-start hover-underline' style={{cursor:"pointer"}}>
-                            <span className='text-danger'>Fund</span><span className='mx-1'>Wallet</span>
+                        <div className='text-start hover-underline' style={{ cursor: "pointer" }}>
+                            <span className='text-danger'>Chat us</span><span className='mx-1'>Here</span>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
 
