@@ -201,6 +201,30 @@ const Dashboard = () => {
             </div>
 
 
+            <div class="container mt-5">
+                <div class="row gap-2">
+                    <div class="col-9 border p-2"  style={{ backgroundColor: "#00838d", color: "#00848db0", boxShadow:"0px 0px 2px 2px" }}>
+                        <h2 className='text-white'>Notifications</h2>
+                        <p className='text-white'>Payment successful your account has been credited with sum of #195 .</p>
+                        <button className='btn btn-dark p-2'
+                           
+                        >see all messages</button>
+                    </div>
+
+                    <div class="col-4 border"  style={{ backgroundColor: "#00838d", color: "#00848db0", boxShadow:"0px 0px 2px 2px" }}>
+                        <h2 className='text-white'>FAQs:</h2>
+                        <p className='text-white'>
+                        Please go through them to have a better knowledge of this platform
+                        </p>
+                        <button className='btn btn-dark p-2'
+                           
+                           >FAQs</button>
+                    </div>
+                    <div class="col-6 border">.col-6<br />Subsequent columns continue along the new line.</div>
+                </div>
+            </div>
+
+
         </>
     );
 };
