@@ -57,6 +57,19 @@ const Dashboard = () => {
     const logoutBtn = () => {
         navigate("/login")
     }
+
+
+
+    function FundwalletBtn() {
+        const modalElement = document.getElementById('exampleModalToggle');
+        if (modalElement) {
+            const modal = new window.bootstrap.Modal(modalElement);
+            modal.show();
+        } else {
+            console.error('Modal element not found!');
+        }
+    }
+
     return (
         <>
             <Navbar />
@@ -210,9 +223,44 @@ const Dashboard = () => {
                             ₦100
                         </div>
                         <div className='text-start hover-underline' style={{ cursor: "pointer" }}>
-                            <span className='text-danger'>Fund</span><span className='mx-1'>Wallet</span>
+                            <span
+                                className="text-danger"
+                                onClick={FundwalletBtn}
+                            >
+                                Fund <span className="mx-1 text-dark">Wallet</span>
+                            </span>
                         </div>
                     </div>
+
+                    <div
+                        className="modal fade"
+                        id="exampleModalToggle"
+                        aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel"
+                        tabIndex="-1"
+                    >
+                        <div className="modal-dialog modal-dialog-centered">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h1 className="modal-title fs-5" id="exampleModalToggleLabel">Fund Wallet</h1>
+                                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div className="modal-body">
+                                    <div className='text-start'>
+                                        <label className="">Enter To Amount</label>
+                                    </div>
+                                    <input type="text" className='form-control' placeholder='Enter Amout' />
+                                </div>
+                                <div className="modal-footer">
+                                    <button className="btn btn-primary">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
 
                     <div class="Db_container_width bg-white p-2">
                         <div>
