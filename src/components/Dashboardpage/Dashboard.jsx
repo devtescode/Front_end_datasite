@@ -1,7 +1,62 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../Narbarpage/Narbar';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Dashboard = () => {
+    const navigate = useNavigate()
+    const [user, setUser] = useState("");
+    let url = "http://localhost:4000/userfunding/dashboard"
+    useEffect(() => {
+        let token = localStorage.token;
+
+        if (!token) {
+            console.warn("No token found, redirecting to login.");
+            navigate("/login");
+            return;
+        }
+
+        axios.get(url, {
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+        })
+            .then((response) => {
+                if (!localStorage.useradminlogin || response.data.status === false) {
+                    console.warn("User not logged in or invalid status, redirecting to login.");
+                    navigate("/login");
+                } else {
+                    // Successfully received data, updating state
+                    setUser(response.data.user);
+
+
+                    // Debugging: Log user data
+                    // console.log("User Data:", response.data.user);
+                }
+            })
+            .catch((err) => {
+                // Handle different types of errors
+                if (err.response) {
+                    // Server responded with a status other than 2xx
+                    console.error("Error Response:", err.response.data);
+                } else if (err.request) {
+                    // Request was made but no response was received
+                    console.error("No Response:", err.request);
+                } else {
+                    // Something happened in setting up the request that triggered an error
+                    console.error("Error:", err.message);
+                }
+
+                // Optionally navigate to an error page or show an error message
+            });
+    }, [navigate]);
+
+
+    const logoutBtn = () => {
+        navigate("/login")
+    }
     return (
         <>
             <Navbar />
@@ -118,7 +173,7 @@ const Dashboard = () => {
                                 </div>
 
                                 <div>
-                                    <a class="nav-link" role="button" aria-expanded="false">
+                                    <a class="nav-link" role="button" aria-expanded="false" onClick={logoutBtn}>
                                         <i class="ri-logout-box-r-line" style={{ color: "#00838d" }}></i> LogOut
                                     </a>
                                 </div>
@@ -129,10 +184,10 @@ const Dashboard = () => {
                 </div>
             </nav>
 
-            <div className='p-3' style={{marginTop:"70px"}}>
+            <div className='p-3' style={{ marginTop: "70px" }}>
                 <div className='text-white'>
                     <h2>
-                        Welcome back, Tescode
+                        Welcome back, {user.Username}
                     </h2>
                     <p>At Datasub, we keep you connected...</p>
                 </div>
@@ -207,7 +262,7 @@ const Dashboard = () => {
                         <h2 className='text-white'>Notifications</h2>
                         <p className='text-white'>Payment successful your account has been credited with sum of #195 .</p>
                         <button className='btn p-2 text-white'
-                        style={{backgroundColor:"#EA9F57"}}
+                            style={{ backgroundColor: "#EA9F57" }}
                         >see all messages</button>
                     </div>
 
@@ -215,12 +270,12 @@ const Dashboard = () => {
                         <h2 className='text-white'>Support Team:</h2>
                         <p className='text-white'>Have anything to say to us? Please contact our Support Team on Whatsapp</p>
                         <div className=''>
-                        <div>
-                            <button className='btn p-2 text-white' style={{backgroundColor:"#30BD49"}}>Whatsapp us</button>
-                        </div>
-                        <div>
-                            <button className='btn p-2 mt-2 text-white' style={{backgroundColor:"#30BD49"}}>Join Our Whatsapp group</button>
-                        </div>
+                            <div>
+                                <button className='btn p-2 text-white' style={{ backgroundColor: "#30BD49" }}>Whatsapp us</button>
+                            </div>
+                            <div>
+                                <button className='btn p-2 mt-2 text-white' style={{ backgroundColor: "#30BD49" }}>Join Our Whatsapp group</button>
+                            </div>
                         </div>
                     </div>
 
@@ -230,7 +285,7 @@ const Dashboard = () => {
                             Please go through them to have a better knowledge of this platform
                         </p>
                         <button className='btn p-2 text-white'
-                        style={{backgroundColor:"#176AEA"}}
+                            style={{ backgroundColor: "#176AEA" }}
                         >FAQs</button>
                     </div>
                 </div>
