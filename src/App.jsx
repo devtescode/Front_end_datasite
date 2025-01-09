@@ -5,6 +5,7 @@ import Notfound from './components/Notfound/Notfound'
 import Signup from './components/SignUp/Signup'
 import Login from './components/Loginpage/Login'
 import Dashboard from './components/Dashboardpage/Dashboard'
+import Buydata from './components/Buydatapage/Buydata'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path='/register' element={<Signup/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/dashboard' element={<Dashboard/>}/>
+      <Route path='/buydata' element={<Buydata/>}/>
       <Route path='*' element={<Notfound/>}/>
     </Routes>
     </>
