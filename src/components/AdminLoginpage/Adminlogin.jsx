@@ -68,6 +68,15 @@ const Adminlogin = () => {
       }
     },
   });
+
+
+  useEffect(() => {
+    const adminToken = localStorage.getItem('adminToken');
+    if (adminToken) {
+      navigate('/admin/dashboard');
+    }
+  }, [navigate]);
+  
   return (
     <div className='container_main'>
       <div className='main'>

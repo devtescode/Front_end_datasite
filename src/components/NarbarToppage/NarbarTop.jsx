@@ -8,6 +8,8 @@ const NarbarTop = () => {
     }
     const logoutBtn = () => {
         navigate("/login")
+        localStorage.removeItem("token")
+        localStorage.removeItem("UserData")
     }
     const DatasubBtn = ()=>{
         navigate("/dashboard")

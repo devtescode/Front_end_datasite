@@ -5,6 +5,7 @@ const AdminNavbarTop = () => {
     const navigate = useNavigate()
     const logoutBtn=()=>{
         navigate("/adminlogin")
+        localStorage.removeItem('adminToken');
     }
     const DatasubBtn =()=>{
         navigate("/admin/dashboard")
@@ -13,7 +14,7 @@ const AdminNavbarTop = () => {
         <div>
             <nav class="navbar navbar-expand-lg bg-body-tertiary p-3 fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" onClick={DatasubBtn} style={{ cursor: "pointer" }}>DATASUB Admin</a>
+                    <a class="navbar-brand" onClick={DatasubBtn} style={{ cursor: "pointer" }}>DATASUB ADMIN</a>
                     <button
                         class="navbar-toggler"
                         type="button"
@@ -72,7 +73,7 @@ const AdminNavbarTop = () => {
 
                                 <div>
                                     <a class="nav-link" role="button" aria-expanded="false">
-                                        <i class="ri-notification-line" style={{ color: "#00838d" }}></i> Notification
+                                        <i class="ri-notification-line" style={{ color: "#00838d" }}></i>Send Notification
                                     </a>
                                 </div>
 

@@ -8,20 +8,28 @@ import Dashboard from './components/Dashboardpage/Dashboard'
 import Buydata from './components/Buydatapage/Buydata'
 import Adminlogin from './components/AdminLoginpage/Adminlogin'
 import Admindashboard from './components/AdminDashboardpage/Admindashboard'
+import ProtectedAdminRoute from './components/ProtectedAdminRoute'
 
 function App() {
   return (
     <>
-    <Routes>
-      <Route path='/' element={<Homepage/>}/>
-      <Route path='/register' element={<Signup/>}/>
-      <Route path='/login' element={<Login/>}/>
-      <Route path='/dashboard' element={<Dashboard/>}/>
-      <Route path='/buydata' element={<Buydata/>}/>
-      <Route path='/adminlogin' element={<Adminlogin/>}/>
-      <Route path='/admin/dashboard' element={<Admindashboard/>}/>
-      <Route path='*' element={<Notfound/>}/>
-    </Routes>
+      <Routes>
+        <Route path='/' element={<Homepage />} />
+        <Route path='/register' element={<Signup />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/buydata' element={<Buydata />} />
+        <Route path='/adminlogin' element={<Adminlogin />} />
+        <Route path='/admin/dashboard'
+
+          element={
+            <ProtectedAdminRoute>
+              <Admindashboard />
+            </ProtectedAdminRoute>
+          }
+        />
+        <Route path='*' element={<Notfound />} />
+      </Routes>
     </>
   )
 }
