@@ -55,7 +55,7 @@ const Admindashboard = () => {
                         <div>
                             <div className='d-flex justify-content-between align-items-center'>
                                 <div className=''>
-                                    <p>User No</p>
+                                    <p>Users Registered</p>
                                 </div>
                                 <div className='fs-3 border text-white ' style={{ height: "50px", width: "50px", borderRadius: "50px", backgroundColor: "#00838d" }}>
                                     ₦
