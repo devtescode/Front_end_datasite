@@ -18,24 +18,45 @@ const Buydata = () => {
 
                     <div className="mb-3">
                         <label className="form-label">Network</label>
-                        <input type="text" className="form-control" placeholder="Enter network provider" />
+                        <select name="" id=""  type="text" className="form-control">
+                            <option value="">Choose Network</option>
+                            <option value="">MTN</option>
+                            <option value="">AIRTEL</option>
+                            <option value="">GLO</option>
+                            <option value="">9MOBILE</option>
+                        </select>
+                        
                     </div>
+
+                    
 
                     <div className="mb-3">
                         <label className="form-label">Data Type</label>
-                        <input type="text" className="form-control" placeholder="Enter data type" />
+                        <select name="" id=""  type="text" className="form-control">
+                            <option value="">Choose Type</option>
+                            <option value="">SME</option>
+                            <option value="">SME2</option>
+                            <option value="">AWOOF GIFTING</option>
+                        </select>
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label">Plan</label>
-                        <input type="text" className="form-control" placeholder="Enter plan details" />
+                        <select name="" id=""  type="text" className="form-control">
+                            <option value="">Choose Data Plan</option>
+                            <option value="">500MB SME = N133 30Days</option>
+                            <option value="">500MB SME = N133 30Days</option>
+                            <option value="">500MB SME = N133 30Days</option>
+                            <option value="">500MB SME = N133 30Days</option>
+                            <option value="">500MB SME = N133 30Days</option>
+                            
+                        </select>
                     </div>
 
                     <div className="mb-3">
                         <label className="form-label">Phone Number</label>
                         <textarea className="form-control" rows="3" placeholder="Enter phone number"></textarea>
                     </div>
-
                     <button className="btn btn-dark">Continue</button>
                 </div>
 
