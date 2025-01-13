@@ -7,6 +7,7 @@ import Login from './components/Loginpage/Login'
 import Dashboard from './components/Dashboardpage/Dashboard'
 import Buydata from './components/Buydatapage/Buydata'
 import Adminlogin from './components/AdminLoginpage/Adminlogin'
+import Admindashboard from './components/AdminDashboardpage/Admindashboard'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path='/dashboard' element={<Dashboard/>}/>
       <Route path='/buydata' element={<Buydata/>}/>
       <Route path='/adminlogin' element={<Adminlogin/>}/>
+      <Route path='/admin/dashboard' element={<Admindashboard/>}/>
       <Route path='*' element={<Notfound/>}/>
     </Routes>
     </>

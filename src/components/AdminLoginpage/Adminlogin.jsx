@@ -18,9 +18,7 @@ const Adminlogin = () => {
     }),
     onSubmit: async (values, { setSubmitting }) => {
       try {
-        const response = await axios.post('http://localhost:4000/userfunding/adminlogin', values);
-        console.log(response);
-        
+        const response = await axios.post('http://localhost:4000/userfunding/adminlogin', values);        
         if (response.data.status) {
           Swal.fire({
             icon: 'success',
