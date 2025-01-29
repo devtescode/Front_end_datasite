@@ -10,6 +10,9 @@ const AdminNavbarTop = () => {
     const DatasubBtn =()=>{
         navigate("/admin/dashboard")
     }
+    const CreateBuydata=()=>{
+        navigate("/admin/data")
+    }
     return (
         <div>
             <nav class="navbar navbar-expand-lg bg-body-tertiary p-3 fixed-top">
@@ -56,7 +59,7 @@ const AdminNavbarTop = () => {
                                         <i class="ri-numbers-line" style={{ color: "#00838d" }}></i> Service
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="serviceDropdown">
-                                        <li><a class="dropdown-item" style={{ cursor: "pointer" }}>Create Buy Data</a></li>
+                                        <li><a class="dropdown-item" style={{ cursor: "pointer" }} onClick={CreateBuydata}>Create Buy Data</a></li>
                                         <li><a class="dropdown-item" style={{ cursor: "pointer" }}>Create Buy Airtime</a></li>
                                     </ul>
                                 </li>

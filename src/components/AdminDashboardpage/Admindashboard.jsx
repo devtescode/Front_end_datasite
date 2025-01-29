@@ -37,7 +37,7 @@ const Admindashboard = () => {
                             </div>
                         </div>
                         <div className='text-start fs-2'>
-                            ₦1,000
+                            ₦100,000.00
                         </div>
                         <div className='text-start hover-underline' style={{ cursor: "pointer" }}>
                             <span

@@ -25,7 +25,7 @@ const Signup = () => {
       // console.log( "vsds",values);
 
       try {
-        const response = await axios.post('http://localhost:4000/userfunding/register', values);
+        const response = await axios.post('http://localhost:3000/userfunding/register', values);
         if (response.data.status) {
           Swal.fire({
             icon: 'success',

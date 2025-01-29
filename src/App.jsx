@@ -9,6 +9,8 @@ import Buydata from './components/Buydatapage/Buydata'
 import Adminlogin from './components/AdminLoginpage/Adminlogin'
 import Admindashboard from './components/AdminDashboardpage/Admindashboard'
 import ProtectedAdminRoute from './components/ProtectedAdminRoute'
+import Buyairtime from './components/Buyairtimepage/Buyairtime'
+import AdminBuydata from './components/AdminBuydatapage/AdminBuydata'
 
 function App() {
   return (
@@ -20,14 +22,15 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/buydata' element={<Buydata />} />
         <Route path='/adminlogin' element={<Adminlogin />} />
+        <Route path='/buyairtime' element={<Buyairtime/>}/>
         <Route path='/admin/dashboard'
-
           element={
             <ProtectedAdminRoute>
               <Admindashboard />
             </ProtectedAdminRoute>
           }
         />
+        <Route path='/admin/data' element={<AdminBuydata/>}/>
         <Route path='*' element={<Notfound />} />
       </Routes>
     </>
