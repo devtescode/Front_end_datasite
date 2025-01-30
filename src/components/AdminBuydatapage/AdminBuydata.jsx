@@ -20,24 +20,41 @@ const AdminBuydata = () => {
         price: "",
         duration: ""
     });
-
+    
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
+    
+        // Format data to include `plans` as an array
+        const formattedData = {
+            network: formData.network,
+            dataType: formData.dataType,
+            plans: [{
+                name: formData.name,
+                price: formData.price,
+                duration: formData.duration
+            }]
+        };
+        console.log(formattedData);
+        
+    
         try {
-            const response = await axios.post("http://localhost:3000/services/createdataplans", formData);
+            const response = await axios.post("http://localhost:3000/services/createdataplans", formattedData);
             alert("Data Plan Created Successfully!");
             console.log(response);
-            
-            setFormData({ network: "", dataType: "", name: "", price: "", duration: "" }); // Clear form
+    
+            // Clear form after successful submission
+            setFormData({ network: "", dataType: "", name: "", price: "", duration: "" });
+    
         } catch (error) {
             console.error("Error creating plan:", error);
             alert("Failed to create plan");
         }
     };
+    
 
     return (
         <div>
@@ -48,9 +65,9 @@ const AdminBuydata = () => {
                 <AdminNavbarTop />
             </div>
 
-            <div className="container" style={{ marginTop: "70px"}}>
-                <form onSubmit={handleSubmit} className="col-md-6 mx-auto p-3 bg-light">
-                <h2 className="text-center">Create Data Plan</h2>
+            <div className="container" style={{ marginTop: "80px"}}>
+                <form onSubmit={handleSubmit} className="col-md-6 mx-auto p-3 rounded bg-light">
+                <h4 className="text-center ">Create Data Plan</h4>
                     <div className="mb-3">
                         <label className="form-label">Network</label>
                         <select name="network" className="form-control" value={formData.network} onChange={handleChange} required>
