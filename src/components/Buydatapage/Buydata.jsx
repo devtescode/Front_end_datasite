@@ -35,7 +35,7 @@ const Buydata = () => {
             // If no network or dataType is selected, clear plans
             setPlans([]);
         }
-    }, [formData.network, formData.dataType]); // Runs when `network` or `dataType` changes
+    }, [formData.network, formData.dataType]); 
 
 
     // Handle input changes
@@ -44,9 +44,29 @@ const Buydata = () => {
     };
 
     // Submit form
-    const handleSubmit = (e) => {
+    const handleSubmit =async (e) => {
         e.preventDefault();
-        console.log("User selected plan:", formData);
+
+    const requestData = {
+        network: formData.network,
+        dataType: formData.dataType,
+        plan: formData.plan,
+        phoneNumber: formData.phoneNumber,
+    };
+
+    try {
+        const response = await axios.post("http://localhost:3000/services/userbuydata", requestData, {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+        alert("Data purchase successful!");
+        console.log(response.data);
+    } catch (error) {
+        console.error("Error purchasing data:", error);
+        alert("Failed to purchase data");
+    }
     };
 
     return (
